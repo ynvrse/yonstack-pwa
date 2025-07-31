@@ -1,0 +1,1 @@
+import{j as e}from"./theme-provider-BGbv258i.js";function s(){return e.jsxs(e.Fragment,{children:[e.jsx("meta",{name:"title",content:"Page 3"}),e.jsx("div",{className:"w-full h-full flex items-center justify-center",children:e.jsx("h1",{className:"text-4xl font-bold",children:"Page 3"})})]})}export{s as default};
