@@ -1,10 +1,16 @@
 const title = 'YONSTACK - PWA';
 
+const version = '1.0.0';
+
 const repoName = 'yonstack-pwa';
+
+const author = 'Dion Firmansyah';
 
 const email = 'dioonfirmansyah@gmail.com';
 
-const repository = 'https://github.com/ynvrse/' + repoName;
+const github = 'https://github.com/ynvrse/';
+
+const repository = github + repoName;
 
 const dateFormat = 'MMMM DD, YYYY';
 
@@ -19,4 +25,4 @@ const defaultMetaTags = {
     description: 'Starter kit for modern web applications',
 };
 
-export { dateFormat, defaultMetaTags, email, loader, repoName, repository, title };
+export { author, dateFormat, defaultMetaTags, email, github, loader, repoName, repository, title, version };
