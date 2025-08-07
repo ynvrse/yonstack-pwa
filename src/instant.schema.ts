@@ -1,10 +1,5 @@
-import { InstaQLEntity, i, init } from '@instantdb/react';
-
-import { env } from '@/lib/env';
-
-const APP_ID = env.instantDbAppId;
-
-const schema = i.schema({
+import { i } from '@instantdb/react';
+const _schema = i.schema({
     entities: {
         $files: i.entity({
             path: i.string().unique().indexed(),
@@ -32,10 +27,10 @@ const schema = i.schema({
         },
     },
 });
+// This helps Typescript display nicer intellisense
+type _AppSchema = typeof _schema;
+interface AppSchema extends _AppSchema {}
+const schema: AppSchema = _schema;
 
-export type Todo = InstaQLEntity<typeof schema, 'todos'>;
-
-const db = init({ appId: APP_ID, schema });
-const room = db.room('todos');
-
-export { db, room };
+export type { AppSchema };
+export default schema;

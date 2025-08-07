@@ -1,4 +1,4 @@
-import { Bug, Github, Home, ListTodo, Mountain } from 'lucide-react';
+import { Github, Home, Settings } from 'lucide-react';
 
 import asyncComponentLoader from '@/utils/loader';
 
@@ -18,23 +18,12 @@ const routes: Routes = [
         icon: Github,
     },
     {
-        component: asyncComponentLoader(() => import('@/pages/Page2')),
-        path: '/page-2',
-        title: 'Page 2',
-        icon: ListTodo,
+        component: asyncComponentLoader(() => import('@/pages/Setting')),
+        path: '/setting',
+        title: 'Settings',
+        icon: Settings,
     },
-    {
-        component: asyncComponentLoader(() => import('@/pages/Page3')),
-        path: '/page-3',
-        title: 'Page 3',
-        icon: Mountain,
-    },
-    {
-        component: asyncComponentLoader(() => import('@/pages/Page4')),
-        path: '/page-4',
-        title: 'Page 4',
-        icon: Bug,
-    },
+
     {
         component: asyncComponentLoader(() => import('@/pages/NotFound')),
         path: '*',
